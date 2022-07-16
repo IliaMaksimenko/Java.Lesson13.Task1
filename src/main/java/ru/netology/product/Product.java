@@ -22,9 +22,10 @@ public class Product {
     }
 
 
-    public int getPrice() {
-        return price;
-    }
+    public boolean matches(Product product, String search) {
 
+        return getName().contains(search);
+
+    }
 
 }
