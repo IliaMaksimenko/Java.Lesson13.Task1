@@ -18,20 +18,20 @@ public class ProductManager {
 
     }
 
-    public Product[] getAddProduct(){
+    public Product[] getAddProduct() {
         return repository.getProducts();
     }
 
     public Product[] searchBy(String text) {
         Product[] result = new Product[0];
-        for (Product product: repository.getProducts()) {
+        for (Product product : repository.getProducts()) {
             if (matches(product, text)) {
-              Product[] tmp = new Product[result.length + 1];
+                Product[] tmp = new Product[result.length + 1];
                 System.arraycopy(result, 0, tmp, 0, result.length);
-              tmp[tmp.length - 1] = product;
-              result = tmp;
+                tmp[tmp.length - 1] = product;
+                result = tmp;
             }
-                    }
+        }
         return result;
     }
 

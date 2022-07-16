@@ -18,9 +18,8 @@ public class ProductManagerTest {
     Product product6 = new Smartphone(7451, "iPhone 13 Pro", 1_000, "Apple");
 
 
-
     @Test
-    public void shouldAddProduct(){
+    public void shouldAddProduct() {
 
         ProductManager manager = new ProductManager(new ProductRepository());
 
@@ -36,7 +35,7 @@ public class ProductManagerTest {
     }
 
     @Test
-    public void shouldSearchProduct(){
+    public void shouldSearchProduct() {
 
         ProductManager manager = new ProductManager(new ProductRepository());
 
@@ -53,7 +52,7 @@ public class ProductManagerTest {
 
 
     @Test
-    public void shouldNoSearchProduct(){
+    public void shouldNoSearchProduct() {
 
         ProductManager manager = new ProductManager(new ProductRepository());
 
